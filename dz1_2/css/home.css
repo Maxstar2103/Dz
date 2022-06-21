@@ -1,0 +1,41 @@
+
+body{
+padding: 50px;
+}
+
+.dream-team {
+
+}
+
+.dream-team__container{
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+.dream-team__items{
+	max-width: 250px; 
+	margin: 0 auto;
+	list-style: none;
+
+}
+
+.dream-team__item{
+	font-size: 20px;
+	padding: 25px 0px;
+	text-align: center;
+	border: 1px solid black;
+	transition : all 0.4s ease 0s;
+
+}
+
+._active{
+
+	background-color: green;
+
+
+}
+._yellow{
+	background-color: rgb(233, 199, 10);
+}
+
