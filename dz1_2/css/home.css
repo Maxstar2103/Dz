@@ -1,41 +1,25 @@
-
-body{
-padding: 50px;
+*{
+	margin: 0;
+	padding: 0;
 }
-
-.dream-team {
-
-}
-
-.dream-team__container{
-	max-width: 1000px;
+#app{
 	margin: 0 auto;
-
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-
-.dream-team__items{
-	max-width: 250px; 
-	margin: 0 auto;
-	list-style: none;
-
+div{
+	padding: 20px;
 }
-
-.dream-team__item{
-	font-size: 20px;
-	padding: 25px 0px;
+.static{
+	width: 150px;
 	text-align: center;
 	border: 1px solid black;
-	transition : all 0.4s ease 0s;
-
+	background: none;
 }
-
-._active{
-
-	background-color: green;
-
-
+.en{
+	background: orange;
 }
-._yellow{
-	background-color: rgb(233, 199, 10);
+.active{
+	background: green;
 }
-

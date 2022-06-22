@@ -19,7 +19,7 @@ const userInfo = () => {
 }
 
 
-userInfo()
+// userInfo()
 
 function getName() {
 	let userName = prompt('Hello, what is your name?')
@@ -57,62 +57,110 @@ function getMeal() {
 }
 
 
-const all = document.querySelector('.dream-team__items')
-
-
-const frontendMisha = document.querySelector(`#fe`)
-const designPasha = document.querySelector(`#ds`)
-const projectManagerSanya = document.querySelector(`#pm`)
-const backendGrisha = document.querySelector(`#be`)
-const businessAnalystSveta = document.querySelector(`#ba`)
-
-const personals = document.querySelectorAll('.dream-team__item')
-
-personals.forEach(personal => {
-	personal.addEventListener("click", (e) => {
-		const targetElement = e.target;
-		if (targetElement === frontendMisha) {
-			del(personals)
-			frontendMisha.classList.add('_yellow')
-			designPasha.classList.add('_active')
-			projectManagerSanya.classList.add('_active')
-			backendGrisha.classList.add('_active')
-		} if (targetElement === designPasha) {
-			del(personals)
-			designPasha.classList.add('_yellow')
-			projectManagerSanya.classList.add('_active')
-			frontendMisha.classList.add('_active')
-		} if (targetElement === projectManagerSanya) {
-			del(personals)
-			projectManagerSanya.classList.add('_yellow')
-			frontendMisha.classList.add('_active')
-			designPasha.classList.add('_active')
-			backendGrisha.classList.add('_active')
-			businessAnalystSveta.classList.add('_active')
-		} if (targetElement === backendGrisha) {
-			del(personals)
-			backendGrisha.classList.add('_yellow')
-			frontendMisha.classList.add('_active')
-			projectManagerSanya.classList.add('_active')
-			businessAnalystSveta.classList.add('_active')
-		} if (targetElement === businessAnalystSveta) {
-			del(personals)
-			businessAnalystSveta.classList.add('_yellow')
-			projectManagerSanya.classList.add('_active')
-		}
-	})
-
-})
 
 
 
-function del(personals) {
-	for (let i = 0; i < personals.length; i++)
-		if (personals[i].classList.contains('_active') || personals[i].classList.contains('_yellow')) {
-			personals[i].classList.remove('_active')
-			personals[i].classList.remove('_yellow')
-		}
+
+
+// function del(personals) {
+// 	for (let i = 0; i < personals.length; i++)
+// 		if (personals[i].classList.contains('_active') || personals[i].classList.contains('_yellow')) {
+// 			personals[i].classList.remove('_active')
+// 			personals[i].classList.remove('_yellow')
+// 		}
+// }
+
+const users = [
+	{
+		content: 'Frontend Misha',
+		id: 'fe',
+		relations: ['pm', 'be', 'ds']
+	},
+	{
+		content: 'Design Pasha',
+		id: 'ds',
+		relations: ['pm', 'fe']
+	},
+	{
+		content: 'Project Manager Sanya',
+		id: 'pm',
+		relations: ['ba', 'fe', 'be', 'ds']
+	},
+	{
+		content: 'Backend Grisha',
+		id: 'be',
+		relations: ['pm', 'fe', 'ba']
+	},
+	{
+		content: 'Business Analyst Sveta',
+		id: 'ba',
+		relations: ['pm']
+	},
+
+]
+
+
+const renderList = () => {
+
+	const app = document.getElementById('app')
+
+
+	for (const item of users) {
+		let div = document.createElement('div')
+
+
+		div.textContent = item.content
+		div.id = item.id
+		div.className = 'static'
+
+
+
+
+		div.addEventListener('click', function () {
+
+			enabledItems(item)
+		})
+		app.appendChild(div)
+
+
+	}
 }
 
 
+const enabledItems = (item) => {
+	let div = document.getElementById(item.id)
+	if (div.className !== 'en static') {
+		setNullClass()
+		div.className = 'en static'
 
+		for (item of item.relations) {
+			div = document.getElementById(item)
+			div.className = 'active static'
+		}
+	} else {
+		setNullClass()
+	}
+}
+
+
+const setNullClass = () => {
+	let div
+
+	for (const user of users) {
+		div.document.getElementById(user.id)
+		div.className = 'static'
+	}
+}
+
+renderList()
+
+
+
+
+// const persons = document.querySelectorAll('.static')
+// persons.forEach((person) => {
+// 	person.addEventListener('click', (e) => {
+// 		person.classList.add('en')
+// 		console.log(item.relations)
+// 	})
+// })
