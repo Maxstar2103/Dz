@@ -69,3 +69,24 @@ getNumToArr(-50, 50, arr)
 console.log(arr)
 */
 
+/*
+// Чому вона не працює для другої умови?
+
+function getNumToArr(numSatart, numFinish, arrow) {
+
+
+	for (let i = numSatart - 1; i <= numFinish; i++) {
+
+
+		if (arrow[-i] || arrow[i] % num === 0) {
+			arrow.splice(i, 1)
+		} else {
+			arrow.push(i)
+		}
+
+	}
+
+}
+*/
+// getNumToArr(-50, 50, arr)
+// console.log(arr)
