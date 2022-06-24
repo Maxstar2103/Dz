@@ -5,9 +5,7 @@ function getNumToArr(numSatart, numFinish, arrow) {
 
 	for (let i = numSatart; i <= numFinish; i++) {
 		arrow.push(i)
-		if (arrow(-i)) {
-			arrow.shift(-i)
-		}
+
 	}
 }
 getNumToArr(-50, 50, arr)
