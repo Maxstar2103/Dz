@@ -7,6 +7,22 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.mave-static{
+	background-color: rgb(212, 193, 16);
+
+}
+.move{
+	background-color: rgba(255, 0, 0, 0.938);
+	
+	/* transform: rotate(360deg);
+	transition: transform 0.3s ease 0s; */
 }
 div{
 	padding: 20px;

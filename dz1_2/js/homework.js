@@ -123,11 +123,39 @@ function getBag3(bag) {
 // getBag3(bag)
 // ----------------------------------------------------------------------------------
 
-bag.forEach((item) => {
+/*bag.forEach((item) => {
 	const li = document.createElement('li')
 
 	li.textContent = item.item
 
 	ul.appendChild(li)
-})
+})*/
 // ----------------------------------------------------------------------------------
+
+// Завдання 3 - пересування обєктів у вікні браузера з допомогою миші)
+
+app.onmousedown = (event) => {
+	moveAt(event.pageX, event.pageY)
+	// фунція для центрування блоку
+	function moveAt(pageX, pageY) {
+		// відстань від браузера = координати браузера(де ми клікнули) - ширина,висота / 2 + px
+		app.style.left = pageX - app.offsetWidth / 2 + 'px'
+		app.style.top = pageY - app.offsetHeight / 2 + 'px'
+	}
+
+
+	function onMouseMove(event) {
+		moveAt(event.pageX, event.pageY)
+		app.classList.add('move')
+	}
+	// Отримуємо переміщення по всьому документу за допомогою методу mousemove та фунції onMouseMove
+	document.addEventListener('mousemove', onMouseMove)
+
+	// Відміняємо подію на переміщення по всьому документу
+	app.onmouseup = function () {
+		document.removeEventListener('mousemove', onMouseMove)
+		app.onmouseup = null
+		app.classList.remove('move')
+	};
+
+}
