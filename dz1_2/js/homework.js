@@ -134,6 +134,7 @@ function getBag3(bag) {
 
 // Завдання 3 - пересування обєктів у вікні браузера з допомогою миші)
 
+
 app.onmousedown = (event) => {
 
 	moveAt(event.pageX, event.pageY)
@@ -160,3 +161,26 @@ app.onmousedown = (event) => {
 	};
 
 }
+
+// Начальник запросив працівників до кабінету на нараду
+// Кожен хто заходив в кабінет пожимав руки всім присутнім
+// Скільки людей зайшло якщо відомо що відбулось 120 рукостискань
+
+function hay(num) {
+	let result = 0
+	let person = 0
+
+	for (let i = 1; i < num; i++) {
+		if (result <= num) {
+			result += i
+			person++
+		} else {
+			return person
+		}
+	}
+
+}
+
+// console.log(hay(120))
+
+
