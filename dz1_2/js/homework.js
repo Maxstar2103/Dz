@@ -135,7 +135,7 @@ function getBag3(bag) {
 // Завдання 3 - пересування обєктів у вікні браузера з допомогою миші)
 
 app.onmousedown = (event) => {
-	// Не зовсім розумію функцію moveAt
+
 	moveAt(event.pageX, event.pageY)
 	// фунція для центрування блоку
 	function moveAt(pageX, pageY) {
