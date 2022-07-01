@@ -166,7 +166,7 @@ app.onmousedown = (event) => {
 // Кожен хто заходив в кабінет тиснув руки всім присутнім
 // Скільки людей зайшло до кабінету якщо відомо що відбулось 120 рукостискань
 
-function hay(num) {
+const hay = (num) => {
 	let result = 0
 	let person = 0
 
@@ -180,6 +180,7 @@ function hay(num) {
 	}
 
 }
+hay()
 
 // console.log(hay(120))
 
