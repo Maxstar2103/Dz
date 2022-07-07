@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700,&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Roboto";
+	background-color: rgb(247, 243, 243);
+}
+
+[class*="-ibg"] {
+	position: relative;
+}
+
+[class*="-ibg"] img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+
+
+
+
+.container {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+
+.title-block {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.storage__title {
+	font-weight: 700;
+	font-size: 32px;
+	padding: 20px 0px 20px 0px;
+
+}
+
+.underline {
+	width: 35%;
+	height: 3px;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin-bottom: 30px;
+}
+
+.storage__images {
+	display: flex;
+	row-gap: 20px;
+	/* flex: 1 1 auto; */
+	flex-wrap: wrap;
+	background-color: rgb(201, 195, 195);
+	/* padding: 20px 20px; */
+	border-radius: 10px;
+	box-shadow: inset 1px 1px 5px black;
+	padding: 20px 10px;
+
+}
+
+.img-block {
+	padding: 0 10px;
+	flex: 0 1 33.333%;
+}
+
+.img-container {
+	position: relative;
+	padding: 0px 0px 133.1% 0px;
+
+}
+
+
+
+@media (max-width: 767px) {
+	.img-block {
+		flex: 0 0 50%;
+	}
+}
+
+@media (max-width: 500px) {
+	.img-block {
+		flex: 0 0 100%;
+	}
+}
+
+.img-container img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-o-object-fit: cover;
+	object-fit: cover;
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	box-shadow: 1px 3px 5px black;
+	border-radius: 5px;
+}
+
+
+
+
+.storage__popap {
+	position: absolute;
+	z-index: 55;
+	width: 250px;
+	height: 300px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid black;
+
+}
+
+/* .hiden {
+	display: none;
+} */
+
+.icon-heart {
+	font-size: 24px;
+}
+
+.icon-heart:hover {
+	color: red;
+	transition: color 0.3s ease 0;
+	transform: scale(1.1);
+}
