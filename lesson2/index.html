@@ -8,6 +8,7 @@
 	<title>Image images</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/iconsfont.css">
+	<link rel="stylesheet" href="css/likes.css">
 
 
 </head>
@@ -22,7 +23,34 @@
 		<div class="storage__images" id="app">
 
 		</div>
+
 	</div>
+	<div class="info-image__container">
+		<div class="info-image__left left-block">
+			<div class="left-block__img">
+				<img class="left-block__picture" id="left-block__picture"></img>
+				<div class="left-block__likes">
+					<div class="left-block__like icon-dislike" id="like"><span id="span-diss"></span></div>
+					<div class="left-block__like icon-like" id="like"><span id="span-like"></span></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="info-image__right right-block">
+			<div class="right-block__close">&times;</div>
+			<p class="right-block__title">Comments</p>
+			<div class="right-block__comments" id="right-block__comments"></div>
+			<div class="right-block__send-form">
+				<form action="">
+					<textarea placeholder="You comments..." name="" id="" cols="30" rows="10"></textarea>
+					<input type="submit">
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
 
 
 </body>

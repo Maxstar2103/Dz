@@ -111,11 +111,7 @@ body {
 	flex: 0 1 33.333%;
 }
 
-.img-container {
-	position: relative;
-	padding: 0px 0px 133.1% 0px;
-
-}
+.img-container {}
 
 
 
@@ -132,13 +128,8 @@ body {
 }
 
 .img-container img {
-	position: absolute;
 	width: 100%;
 	height: 100%;
-	top: 0;
-	left: 0;
-	-o-object-fit: cover;
-	object-fit: cover;
 	border: 1px solid rgba(0, 0, 0, 0.7);
 	box-shadow: 1px 3px 5px black;
 	border-radius: 5px;
@@ -147,21 +138,8 @@ body {
 
 
 
-.storage__popap {
-	position: absolute;
-	z-index: 55;
-	width: 250px;
-	height: 300px;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	border: 1px solid black;
 
-}
 
-/* .hiden {
-	display: none;
-} */
 
 .icon-heart {
 	font-size: 24px;
@@ -171,4 +149,215 @@ body {
 	color: red;
 	transition: color 0.3s ease 0;
 	transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+.info-image__container {
+	left: 0;
+	right: 0;
+	border: 1px solid black;
+	box-shadow: 1px 1px 5px black;
+	border-radius: 10px;
+	overflow: hidden;
+	transform: translate(0, -50%);
+	margin: 0 auto;
+	background-color: rgb(170, 160, 160);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 800px;
+	height: 600px;
+	position: absolute;
+	top: -100%;
+	transition: top 1s ease 0s;
+	font-family: "Roboto";
+}
+
+.active {
+	top: 50%;
+}
+
+.info-image__left {}
+
+.left-block {
+	flex: 0 1 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.left-block__img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-right: 1px solid black;
+}
+
+.left-block__picture {
+	width: 100%;
+	height: 100%;
+}
+
+.left-block__likes {
+	position: absolute;
+	width: 100%;
+	bottom: -75px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 50px;
+	transition: all .3s ease 0s;
+	padding: 15px 20px;
+}
+
+.icon-like {
+	position: relative;
+	cursor: pointer;
+}
+
+.icon-dislike {
+	position: relative;
+	cursor: pointer;
+}
+
+.icon-like:hover {
+	color: rgb(5, 126, 11);
+	transform: rotate(360deg)scale(1.2);
+	transition: all .3s ease 0s;
+}
+
+.icon-dislike:hover {
+	color: rgb(5, 126, 11);
+	transform: rotate(360deg)scale(1.2);
+	transition: all .3s ease 0s;
+
+}
+
+span {
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 50%;
+	position: absolute;
+	text-align: center;
+}
+
+.icon-like span {
+	right: -7px;
+	top: -7px;
+}
+
+.icon-dislike span {
+	bottom: -7px;
+	right: -7px;
+
+}
+
+
+
+
+.left-block__img:hover .left-block__likes {
+	bottom: 0;
+}
+
+.info-image__right {}
+
+.right-block {
+	flex: 0 1 50%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.right-block__close {
+	font-size: 40px;
+	position: absolute;
+	right: 5px;
+	top: -7px;
+	cursor: pointer;
+
+
+}
+
+.right-block__title {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 4px;
+	padding: 10px;
+	color: rgb(0, 0, 0);
+	border-bottom: 1px solid black;
+
+}
+
+.right-block__comments {
+	flex: 1 1 auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	font-size: 22px;
+	width: 100%;
+	overflow: auto;
+	border-bottom: 1px solid black;
+}
+
+.right-block__comment {
+	background: #fff;
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+span {}
+
+
+
+
+
+.right-block__send-form:hover input {
+	bottom: 0;
+}
+
+textarea {
+	resize: none;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 0;
+	outline: none;
+	font-size: 26px;
+	height: 150px;
+	padding: 10px;
+
+}
+
+
+input {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -40px;
+	height: 40px;
+	background: rgb(94, 168, 83);
+	font-size: 22px;
+	letter-spacing: 3px;
+	transition: bottom .3s ease 0s;
+	cursor: pointer;
+}
+
+
+
+
+.right-block__send-form {
+	bottom: 0;
+	left: 0;
+
 }
