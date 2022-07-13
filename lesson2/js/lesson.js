@@ -73,7 +73,6 @@ const renderInfoImage = (item) => {
 	infoImageContainer = document.querySelector('.info-image__container')
 	const infoImage = document.getElementById('left-block__picture')
 	infoImageContainer.classList.add('active')
-	// setTimeout(() => infoImageContainer.style.display = 'flex', 300)
 
 	infoImage.src = item.url
 
